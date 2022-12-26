@@ -1,0 +1,5 @@
+package com.care.carecrew.generic.dto;
+
+public class UIKeyValue {
+
+}

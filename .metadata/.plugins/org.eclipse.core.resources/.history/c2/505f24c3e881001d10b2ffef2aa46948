@@ -1,0 +1,22 @@
+package com.care.carecrew.generic.dto;
+import java.io.Serializable;
+
+import javax.validation.constraints.NotBlank;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@SuperBuilder
+@EqualsAndHashCode(exclude = { "label" })
+public class UIKeyValue implements Serializable {
+	@NotBlank
+	private String key;
+	@NotBlank
+	private String value;
+}

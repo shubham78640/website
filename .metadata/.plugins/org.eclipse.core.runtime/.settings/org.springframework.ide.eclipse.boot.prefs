@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=care
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.0.0
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=code for carecrew form
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=come.care
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=care
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.care.carecrew
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

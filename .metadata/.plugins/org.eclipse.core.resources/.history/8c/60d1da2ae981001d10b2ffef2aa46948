@@ -1,0 +1,19 @@
+package com.care.carecrew.service.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.care.carecrew.generic.dto.UIKeyValue;
+import com.care.carecrew.service.DropDownService;
+
+public class DropDownServiceImpl implements DropDownService{
+
+
+@Override
+public List<UIKeyValue> getWorkingHours() {
+	
+	List<WorkingHoursEntity> ageSlabe = workingHoursRepository.findAllByStatusOrderByNameAsc(Boolean.TRUE);
+
+	return ageSlabe.stream().map(age -> new UIKeyValue(age.getUuid(), age.getName())).collect(Collectors.toList());
+}
+}

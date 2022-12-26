@@ -1,0 +1,32 @@
+package com.care.carecrew.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Embeddable
+@Table(name = "cities")
+@Entity(name = "cities")
+public class CityEntity {
+
+	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private Long id;
+
+	@Column(name = "city_name")
+	private String cityName;
+	
+	private String cite;
+
+}

@@ -1,0 +1,57 @@
+package com.care.carecrew;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+@Getter
+@Setter
+@ToString
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@MappedSuperclass
+@SuppressWarnings("serial")
+public abstract class AbstractJpaEntity implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	protected String id;
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(createdAt, id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AbstractJpaEntity other = (AbstractJpaEntity) obj;
+		return Objects.equals(createdAt, other.createdAt) && Objects.equals(id, other.id);
+	}
+
+	@Column(name = "created_at", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date createdAt;
+
+}
